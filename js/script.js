@@ -114,7 +114,7 @@ function enterNumber(calcnumbers) {
 }
 
 function enterOperator(calcoperators) {
-    if(firstOperator != null && secondOperator === null) { //Executes the first calculation with firstNum & firstOperator
+    if(firstOperator != null && secondOperator === null) { 
         secondOperator = calcoperators;
         secondNum = displayValue;
         total = operate(Number(firstNum), Number(secondNum), firstOperator);
@@ -139,7 +139,7 @@ function enterOperator(calcoperators) {
 //Input validation for equals
 function checkEquals() {
     if(firstOperator === null) {
-        displayValue = displayValue; //Returns the displayValue instead of an error
+        displayValue = displayValue; 
     }
     else if(secondOperator != null) {
         secondNum = displayValue;
