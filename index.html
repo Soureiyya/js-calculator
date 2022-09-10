@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <script src="./js/script.js" defer></script>
+    <main>
+        <section class="grid-container">
+            <div id="display"></div>
+            <button type="button" id="clearall" class="clear" value="clear" data-key="Delete">AC</button>
+            <button type="button" class="backspace" value="backspace" data-key="Backspace">&#x232b;</button>
+            <button type="button" class="calcoperators" value="/" data-key="NumpadDivide">/</button>
+            <button type="button" class="calcnumbers" value="7" data-key="Digit7">7</button>
+            <button type="button" class="calcnumbers" value="8" data-key="Digit8">8</button>
+            <button type="button" class="calcnumbers" value="9" data-key="Digit9">9</button>
+            <button type="button" class="calcoperators" value="*" data-key="NumpadMultiply">*</button>
+            <button type="button" class="calcnumbers" value="4" data-key="Digit4">4</button>
+            <button type="button" class="calcnumbers" value="5" data-key="Digit5">5</button>
+            <button type="button" class="calcnumbers" value="6" data-key="Digit6">6</button>
+            <button type="button" class="calcoperators" value="-" data-key="NumpadSubtract">-</button>
+            <button type="button" class="calcnumbers" value="1" data-key="Digit1">1</button>
+            <button type="button" class="calcnumbers" value="2" data-key="Digit2">2</button>
+            <button type="button" class="calcnumbers" value="3" data-key="Digit3">3</button>
+            <button type="button" class="calcoperators" value="+" data-key="NumpadAdd">+</button>
+            <button type="button" id ="zero" class="calcnumbers" value="0" data-key="Digit0">0</button>
+            <button type="button" class="decimal" value="." data-key="NumpadDecimal">.</button>
+            <button type="button" class="equals" value="=" data-key="Equal">=</button>
+        </section>  
+    </main>
+</body>
+</html>
