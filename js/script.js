@@ -45,18 +45,17 @@ window.addEventListener('keydown', function(e){
     key.click();
 });
 
-//Populate the display
+//Update display
 let displayValue = '0';
 
 function updateDisplayScreen() {
     const display = document.getElementById('display');
     display.innerText = displayValue; //Add values in the html div
-    
 }
 
 updateDisplayScreen();
 
-//Add event when each key(class) is pressed
+//Add event when each key is pressed
 function clickButton() {
     for(let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function() { 
