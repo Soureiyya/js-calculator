@@ -51,9 +51,7 @@ let displayValue = '0';
 function updateDisplayScreen() {
     const display = document.getElementById('display');
     display.innerText = displayValue; //Add values in the html div
-    if(displayValue.length > 9) {
-        display.innerText = displayValue.substring(0, 9); //Length bigger, takes only 9 characters
-    }
+    
 }
 
 updateDisplayScreen();
@@ -118,7 +116,7 @@ function enterOperator(calcoperators) {
         secondOperator = calcoperators;
         secondNum = displayValue;
         total = operate(Number(firstNum), Number(secondNum), firstOperator);
-        displayValue = roundNum(total, 15).toString();
+        displayValue = roundNum(total, 5).toString();
         firstNum = displayValue;
         total = null;
     }
@@ -126,7 +124,7 @@ function enterOperator(calcoperators) {
         secondNum = displayValue;
         total = operate(Number(firstNum), Number(secondNum), secondOperator);
         secondOperator = calcoperators;
-        displayValue = roundNum(total, 15).toString();
+        displayValue = roundNum(total, 5).toString();
         firstNum = displayValue;
         total = null;
     }
@@ -148,7 +146,7 @@ function checkEquals() {
         if(total === 'Error') {
             displayValue = 'Error';
         } else {
-            displayValue = roundNum(total, 15).toString();
+            displayValue = roundNum(total, 5).toString();
             firstNum = displayValue;
             secondNum = null;
             firstOperator = null;
@@ -162,7 +160,7 @@ function checkEquals() {
         if(total === 'Error') {
             displayValue = 'Error';
         } else {
-            displayValue = roundNum(total, 15).toString();
+            displayValue = roundNum(total, 5).toString();
             firstNum = displayValue;
             secondNum = null;
             firstOperator = null;
