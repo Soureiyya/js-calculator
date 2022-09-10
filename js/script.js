@@ -115,7 +115,7 @@ function enterOperator(calcoperators) {
         secondOperator = calcoperators;
         secondNum = displayValue;
         total = operate(Number(firstNum), Number(secondNum), firstOperator);
-        displayValue = roundNum(total, 4).toString();
+        displayValue = roundNum(total, 2).toString();
         firstNum = displayValue;
         total = null;
     }
@@ -123,7 +123,7 @@ function enterOperator(calcoperators) {
         secondNum = displayValue;
         total = operate(Number(firstNum), Number(secondNum), secondOperator);
         secondOperator = calcoperators;
-        displayValue = roundNum(total, 4).toString();
+        displayValue = roundNum(total, 2).toString();
         firstNum = displayValue;
         total = null;
     }
@@ -145,7 +145,7 @@ function checkEquals() {
         if(total === 'Error') {
             displayValue = 'Error';
         } else {
-            displayValue = roundNum(total, 4).toString();
+            displayValue = roundNum(total, 2).toString();
             firstNum = displayValue;
             secondNum = null;
             firstOperator = null;
@@ -159,7 +159,7 @@ function checkEquals() {
         if(total === 'Error') {
             displayValue = 'Error';
         } else {
-            displayValue = roundNum(total, 4).toString();
+            displayValue = roundNum(total, 2).toString();
             firstNum = displayValue;
             secondNum = null;
             firstOperator = null;
