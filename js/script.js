@@ -62,16 +62,16 @@ updateDisplayScreen();
 function clickButton() {
     for(let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function() { 
-            if(buttons[i].classList.contains('calcnumbers')) { //Checking classnames with its' values
-                enterNumber(buttons[i].value); //Update value of i in the display
+            if(buttons[i].classList.contains('calcnumbers')) { //Classnames with its' values
+                enterNumber(buttons[i].value); 
                 updateDisplayScreen();
             } else if(buttons[i].classList.contains('calcoperators')) {
-                enterOperator(buttons[i].value); //Input validation, enter only numbers
+                enterOperator(buttons[i].value); 
             } else if(buttons[i].classList.contains('equals')) {
-                checkEquals(); //Does not do anything if there's no calcultation
+                checkEquals(); 
                 updateDisplayScreen();
             } else if(buttons[i].classList.contains('decimal')) {
-                addDecimal(buttons[i].value); //Add decimal as from 0
+                addDecimal(buttons[i].value); 
                 updateDisplayScreen();
             } else if(buttons[i].classList.contains('backspace')) {
                 clearLastNum();
@@ -114,7 +114,7 @@ function enterNumber(calcnumbers) {
 }
 
 function enterOperator(calcoperators) {
-    if(firstOperator != null && secondOperator === null) { //Executes the first calculation with firstNum & firstOperator
+    if(firstOperator != null && secondOperator === null) { 
         secondOperator = calcoperators;
         secondNum = displayValue;
         total = operate(Number(firstNum), Number(secondNum), firstOperator);
@@ -136,10 +136,11 @@ function enterOperator(calcoperators) {
     }
 }
 
+
 //Input validation for equals
 function checkEquals() {
     if(firstOperator === null) {
-        displayValue = displayValue; //Returns the displayValue instead of an error
+        displayValue = displayValue; 
     }
     else if(secondOperator != null) {
         secondNum = displayValue;
@@ -197,15 +198,10 @@ function addDecimal(dot) {
 }
 
 //Function to clear last number
-function clearLastNum() {
-    if(displayValue === firstNum || displayValue != secondNum) {
-        displayValue = firstNum;
-        firstOperator = null;
-        secondOperator = null;
-        total = null;
-    } else {
-        displayValue = secondNum;
-    } 
+function clearLastNum(firstNum) {
+    displayValue = displayValue.toString().slice(0, -1);
 }
+
+
 
 
